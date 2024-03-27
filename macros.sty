@@ -1,64 +1,11 @@
 \ProvidesPackage{macros.sty}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% The Family Receipt Book
-\makeatletter
-\newlength{\rbtextwidth}\setlength{\rbtextwidth}{289pt}
-\newlength{\rbtextheight}\setlength{\rbtextheight}{490pt}
-
-\newcommand*{\covertext}{%
-{\normalsize THE NEW\par}
-{\huge FAMILY RECEIPT BOOK\par}
-{\tiny CONTAINING A LARGE COLLECTION OF\par}
-{\footnotesize HIGHLY ESTIMATED RECEIPTS IN A VARIETY \par}
-{\footnotesize OF BRANCHES, NAMELY:\par}
-{\huge BREWING,\par}
-{\Large MAKING AND PRESERVING BRITISH WINES,\par}
-{\huge DYING,\par}
-{\large RURAL AND DOMESTIC ECONOMY,\par}
-{\footnotesize SELECTED FROM EXPERIENCED \& APPROVED RECEIPTS,\par}
-{\normalsize\textsf{FOR THE USE OF PUBLICANS}\par}
-{\footnotesize AND HOUSEKEEPERS IN GENERAL,\par}
-{\tiny A GREAT MANY OF WHICH WERE NEVER BEFORE PUBLISHED.\par}
-\rule{0.15\rbtextwidth}{0.4pt}\par
-{\Large BY G.~MILLSWOOD.\par}
-\rule{0.75\rbtextwidth}{0.4pt}\par
-{\footnotesize \textsf{PRICE ONE SHILLING}\par}
-\rule{0.5\rbtextwidth}{0.4pt}\par
-{\footnotesize DERBY: PRINTED AND SOLD BY G.~WILKINS AND SON,\par}
-{\footnotesize QUEEN STREET.\par}}
-
-\newlength{\sepframe}
-\newlength{\framex}
-\newlength{\framey}
-\setlength{\sepframe}{2.4pt}
-\setlength{\framex}{\rbtextwidth}
-\addtolength{\framex}{2\sepframe}
-\setlength{\framey}{\rbtextheight}
-\addtolength{\framey}{2\sepframe}
-\newcommand*{\titleRB}{%
-\FSfont{5cu}%  Century Old Style
-  \begin{picture}(\strip@pt\rbtextwidth,\strip@pt\rbtextheight)%
-    \thinlines
-    \put(0,0){\framebox(\strip@pt\rbtextwidth,\strip@pt\rbtextheight){%
-\begin{minipage}{\rbtextwidth}
-\centering
-\setlength{\parskip}{0.67\baselineskip}
-\covertext
-\end{minipage}
-}}%
-    \put(-\strip@pt\sepframe,-\strip@pt\sepframe)%
-             {\framebox(\strip@pt\framex,\strip@pt\framey){}}%
-  \end{picture}}
-
-\makeatother
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-% %%% textblock dimensions
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %% The Family Receipt Book
+% \makeatletter
 % \newlength{\rbtextwidth}\setlength{\rbtextwidth}{289pt}
 % \newlength{\rbtextheight}\setlength{\rbtextheight}{490pt}
-% %%% title page text --- one line per ‘paragraph’
+
 % \newcommand*{\covertext}{%
 % {\normalsize THE NEW\par}
 % {\huge FAMILY RECEIPT BOOK\par}
@@ -69,8 +16,7 @@
 % {\Large MAKING AND PRESERVING BRITISH WINES,\par}
 % {\huge DYING,\par}
 % {\large RURAL AND DOMESTIC ECONOMY,\par}
-% {\footnotesize SELECTED FROM EXPERIENCED \&
-% APPROVED RECEIPTS,\par}
+% {\footnotesize SELECTED FROM EXPERIENCED \& APPROVED RECEIPTS,\par}
 % {\normalsize\textsf{FOR THE USE OF PUBLICANS}\par}
 % {\footnotesize AND HOUSEKEEPERS IN GENERAL,\par}
 % {\tiny A GREAT MANY OF WHICH WERE NEVER BEFORE PUBLISHED.\par}
@@ -79,10 +25,9 @@
 % \rule{0.75\rbtextwidth}{0.4pt}\par
 % {\footnotesize \textsf{PRICE ONE SHILLING}\par}
 % \rule{0.5\rbtextwidth}{0.4pt}\par
-% {\footnotesize DERBY: PRINTED AND SOLD BY G.~WILKINS
-% AND SON,\par}
+% {\footnotesize DERBY: PRINTED AND SOLD BY G.~WILKINS AND SON,\par}
 % {\footnotesize QUEEN STREET.\par}}
-% %% set up for the double frame
+
 % \newlength{\sepframe}
 % \newlength{\framex}
 % \newlength{\framey}
@@ -91,20 +36,76 @@
 % \addtolength{\framex}{2\sepframe}
 % \setlength{\framey}{\rbtextheight}
 % \addtolength{\framey}{2\sepframe}
-% %% use a picture for the framed text
-% \makeatletter
+
 % \newcommand*{\titleRB}{%
-% \begin{picture}(\strip@pt\rbtextwidth,\strip@pt\rbtextheight)%
-% \thinlines
-% \put(0,0){\framebox(\strip@pt\rbtextwidth,%
-% \strip@pt\rbtextheight){%
+% \FSfont{5cu}%  Century Old Style
+%   \begin{picture}(\strip@pt\rbtextwidth,\strip@pt\rbtextheight)%
+%     \thinlines
+%     \put(0,0){\framebox(\strip@pt\rbtextwidth,\strip@pt\rbtextheight){%
 % \begin{minipage}{\rbtextwidth}
 % \centering
 % \setlength{\parskip}{0.67\baselineskip}
 % \covertext
 % \end{minipage}
 % }}%
-% \put(-\strip@pt\sepframe,-\strip@pt\sepframe)%
-% {\framebox(\strip@pt\framex,\strip@pt\framey){}}%
-% \end{picture}}
+%     \put(-\strip@pt\sepframe,-\strip@pt\sepframe)%
+%              {\framebox(\strip@pt\framex,\strip@pt\framey){}}%
+%   \end{picture}}
+
 % \makeatother
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%% textblock dimensions
+\newlength{\rbtextwidth}\setlength{\rbtextwidth}{289pt}
+\newlength{\rbtextheight}\setlength{\rbtextheight}{490pt}
+%%% title page text --- one line per ‘paragraph’
+\newcommand*{\covertext}{%
+{\normalsize THE NEW\par}
+{\huge FAMILY RECEIPT BOOK\par}
+{\tiny CONTAINING A LARGE COLLECTION OF\par}
+{\footnotesize HIGHLY ESTIMATED RECEIPTS IN A VARIETY \par}
+{\footnotesize OF BRANCHES, NAMELY:\par}
+{\huge BREWING,\par}
+{\Large MAKING AND PRESERVING BRITISH WINES,\par}
+{\huge DYING,\par}
+{\large RURAL AND DOMESTIC ECONOMY,\par}
+{\footnotesize SELECTED FROM EXPERIENCED \&
+APPROVED RECEIPTS,\par}
+{\normalsize\textsf{FOR THE USE OF PUBLICANS}\par}
+{\footnotesize AND HOUSEKEEPERS IN GENERAL,\par}
+{\tiny A GREAT MANY OF WHICH WERE NEVER BEFORE PUBLISHED.\par}
+\rule{0.15\rbtextwidth}{0.4pt}\par
+{\Large BY G.~MILLSWOOD.\par}
+\rule{0.75\rbtextwidth}{0.4pt}\par
+{\footnotesize \textsf{PRICE ONE SHILLING}\par}
+\rule{0.5\rbtextwidth}{0.4pt}\par
+{\footnotesize DERBY: PRINTED AND SOLD BY G.~WILKINS
+AND SON,\par}
+{\footnotesize QUEEN STREET.\par}}
+%% set up for the double frame
+\newlength{\sepframe}
+\newlength{\framex}
+\newlength{\framey}
+\setlength{\sepframe}{2.4pt}
+\setlength{\framex}{\rbtextwidth}
+\addtolength{\framex}{2\sepframe}
+\setlength{\framey}{\rbtextheight}
+\addtolength{\framey}{2\sepframe}
+%% use a picture for the framed text
+\makeatletter
+\newcommand*{\titleRB}{%
+\begin{picture}(\strip@pt\rbtextwidth,\strip@pt\rbtextheight)%
+\thinlines
+\put(0,0){\framebox(\strip@pt\rbtextwidth,%
+\strip@pt\rbtextheight){%
+\begin{minipage}{\rbtextwidth}
+\centering
+\setlength{\parskip}{0.67\baselineskip}
+\covertext
+\end{minipage}
+}}%
+\put(-\strip@pt\sepframe,-\strip@pt\sepframe)%
+{\framebox(\strip@pt\framex,\strip@pt\framey){}}%
+\end{picture}}
+\makeatother

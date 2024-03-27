@@ -13,9 +13,9 @@ pdflatex -interaction=nonstopmode -output-directory out main.tex
 mv out/main.pdf main.pdf
 
 # If compilation is successful, push changes to GitLab
-if [ -f "$file" ] ; then
-    git add *
-    read -p "Enter a commit message: " commit_msg
-    git commit -m "$commit_msg"
-    git push
-fi
+# if [ -f "$file" ] ; then
+#     git add *
+#     read -p "Enter a commit message: " commit_msg
+#     git commit -m "$commit_msg"
+#     git push
+# fi
